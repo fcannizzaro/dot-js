@@ -46,16 +46,16 @@ require('dot-js')();
 
 # Object Prototype
 
-### Object.dot(notation)
+### Object.dot(path)
 get
 
-### Object.dot(notation, value)
+### Object.dot(path, value)
 set
 
 # Functions
 
-### get(object, notation)
+### get(object, path)
 
-### set(object, notation, value)
+### set(object, path, value)
 
 
