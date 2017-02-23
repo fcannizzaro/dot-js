@@ -24,12 +24,16 @@ var sample = {
 
 // 3
 let value = sample.dot('foo.bar.single');
+
 // or
+
 let value = dot.get(sample, 'foo.bar.single');
 
 // set bar value
 sample.dot('foo.bar', value * 4);
+
 // or
+
 dot.set(sample, 'foo.bar', value * 4);
 
 // { foo : { bar : 12 } }
