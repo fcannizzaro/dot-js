@@ -1,0 +1,14 @@
+{
+  "name": "dot-js",
+  "version": "1.0.0",
+  "description": "Use dot notation to get/set value in object",
+  "main": "index.js",
+  "keywords": [
+    "json",
+    "dot",
+    "notation",
+    "object"
+  ],
+  "author": "Francesco Cannizzaro <francescosaveriocannizzaro@gmail.com>",
+  "license": "MIT"
+}
