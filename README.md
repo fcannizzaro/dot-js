@@ -1,5 +1,6 @@
 # dot-js
 Use dot notation to get/set value in object
+
 [![npm](https://img.shields.io/npm/v/dot-js.svg)](https://www.npmjs.com/package/dot-js)
 
 # Install
