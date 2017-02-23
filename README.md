@@ -12,7 +12,6 @@ npm i --save dot-js
 # Usage
 
 ```javascript
-
 var dot = require('dot-js')();
 
 var sample = {
