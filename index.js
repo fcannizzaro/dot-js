@@ -23,9 +23,12 @@ var dots = (path) => path.split('.');
 // extend Object prototype
 module.exports = () => {
 
-  Object.prototype.dot = function (path, value) {
-    return pick(this, dots(path), value);
-  };
+  Object.defineProperty(Object.prototype, 'dot', {
+    enumerable: false,
+    value: function (path, value) {
+      return pick(this, dots(path), value);
+    }
+  });
 
 };
 
