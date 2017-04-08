@@ -1,8 +1,8 @@
 {
   "name": "dot-js",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Use dot notation to get/set value in object",
-  "main": "index.js",
+  "main": "dist/index.js",
   "keywords": [
     "json",
     "dot",
@@ -12,7 +12,7 @@
   "author": "Francesco Cannizzaro <francescosaveriocannizzaro@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepublish": "babel src --presets babel-preset-es2015 --out-dir dist"
   },
   "repository": {
     "type": "git",
@@ -21,5 +21,9 @@
   "bugs": {
     "url": "https://github.com/fcannizzaro/dot-js/issues"
   },
-  "homepage": "https://github.com/fcannizzaro/dot-js#readme"
+  "homepage": "https://github.com/fcannizzaro/dot-js#readme",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1"
+  }
 }
