@@ -20,20 +20,28 @@ var pick = (obj, path, value) => {
 // obtain dot notation as array
 var dots = (path) => path.split('.');
 
+// get and set
+var functions = {
+  get: (obj, path) => pick(obj, dots(path)),
+  set: (obj, path, value) => pick(obj, dots(path), value)
+};
+
 // extend Object prototype
 module.exports = () => {
 
   Object.defineProperty(Object.prototype, 'dot', {
     enumerable: false,
-    value: function (path, value) {
+    value: function(path, value) {
       return pick(this, dots(path), value);
     }
   });
 
+  return functions;
+
 };
 
 // dot get
-module.exports.get = (obj, path) => pick(obj, dots(path));
+module.exports.get = functions.get;
 
 // dot set
-module.exports.set = (obj, path, value) => pick(obj, dots(path), value);
+module.exports.set = functions.set;

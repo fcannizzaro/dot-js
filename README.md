@@ -22,12 +22,14 @@ var sample = {
   }
 };
 
+let value;
+
 // 3
-let value = sample.dot('foo.bar.single');
+value = sample.dot('foo.bar.single');
 
 // or
 
-let value = dot.get(sample, 'foo.bar.single');
+value = dot.get(sample, 'foo.bar.single');
 
 // set bar value
 sample.dot('foo.bar', value * 4);
