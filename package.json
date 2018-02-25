@@ -1,6 +1,6 @@
 {
   "name": "dot-js",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Use dot notation to get/set value in object",
   "main": "dist/index.js",
   "keywords": [

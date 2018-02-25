@@ -38,7 +38,19 @@ sample.dot('foo.bar', value * 4);
 
 dot.set(sample, 'foo.bar', value * 4);
 
-// { foo : { bar : 12 } }
+// set a new field
+sample.dot('foo.create.new.field', 'hello');
+
+/* {
+    "foo": {
+        "bar": 12,
+        "create": {
+            "new": {
+                "field": "hello"
+            }
+        }
+    }
+} */
 console.log(sample);
 
 ```
