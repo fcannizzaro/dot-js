@@ -14,6 +14,9 @@ let value = sample.dot('foo.bar.single');
 // set bar value
 sample.dot('foo.bar', value * 4);
 
+// or
+dot.set(sample, 'foo.bar', value * 4);
+
 // set a new field
 sample.dot('foo.create.new.field', 'hello');
 
