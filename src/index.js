@@ -1,5 +1,5 @@
 // object navigation
-var pick = (obj, path, value) => {
+const pick = (obj, path, value) => {
 	let size = path.length;
 	if (!Object.keys(obj).includes(path[0])) {
 		const key = path[0];
@@ -31,27 +31,21 @@ var pick = (obj, path, value) => {
 };
 
 // obtain dot notation as array
-var dots = (path) => path.split('.');
+const dots = (path) => path.split('.');
 
 // get and set
-var functions = {
+const functions = {
 	get: (obj, path) => pick(obj, dots(path)),
 	set: (obj, path, value) => pick(obj, dots(path), value)
 };
 
 // extend Object prototype
-module.exports = () => {
-
-	Object.defineProperty(Object.prototype, 'dot', {
-		enumerable: false,
-		value: function(path, value) {
-			return pick(this, dots(path), value);
-		}
-	});
-
-	return functions;
-
-};
+Object.defineProperty(Object.prototype, 'dot', {
+	enumerable: false,
+	value: function(path, value) {
+		return pick(this, dots(path), value);
+	}
+});
 
 // dot get
 module.exports.get = functions.get;

@@ -12,7 +12,7 @@ npm i --save dot-js
 # Usage
 
 ```javascript
-var dot = require('dot-js')();
+var dot = require('dot-js');
 
 var sample = {
   foo: {
@@ -53,13 +53,6 @@ sample.dot('foo.create.new.field', 'hello');
 } */
 console.log(sample);
 
-```
-
-# Module Function
-extend Object prototype
-
-```javascript
-require('dot-js')();
 ```
 
 # Object Prototype

@@ -1,11 +1,11 @@
-const dot = require('./src/index')();
+const dot = require('./dist/index');
 
 const sample = {
-	foo: {
-		bar: {
-			single: 3
-		}
-	}
+    foo: {
+        bar: {
+            single: 3
+        }
+    }
 };
 
 // 3
@@ -28,3 +28,6 @@ sample.dot('foo.create.new.field', 'hello');
     }
 } */
 console.log(sample);
+
+// hello
+console.log(sample.foo.create.new.field);
